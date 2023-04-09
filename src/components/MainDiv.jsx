@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Numbers from "./Numbers";
 
 function MainDiv() {
   return (
@@ -16,6 +17,7 @@ function MainDiv() {
           is appreciated to help us improve our offering!
         </p>
       </TextContainer>
+      <Numbers />
     </Main>
   );
 }
