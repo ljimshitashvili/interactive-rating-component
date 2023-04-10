@@ -1,11 +1,18 @@
 import { useState } from "react";
-import FirstCard from "./components/MainDiv.jsx";
+import FirstCard from "./components/FirstCard.jsx";
+import SecondCard from "./components/SecondCard.jsx";
 import styled from "styled-components";
 
 function App() {
+  const [secondCard, setsecondCard] = useState(false);
+
   return (
     <Background>
-      <FirstCard />
+      {secondCard ? (
+        <SecondCard />
+      ) : (
+        <FirstCard setsecondCard={setsecondCard} />
+      )}
     </Background>
   );
 }

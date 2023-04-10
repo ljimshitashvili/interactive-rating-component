@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import Numbers from "./Numbers";
 
-function FirstCard() {
+function FirstCard({ setsecondCard }) {
+  function handleButton() {
+    setsecondCard(true);
+  }
   return (
     <Main>
       <Star>
@@ -18,6 +21,7 @@ function FirstCard() {
         </p>
       </TextContainer>
       <Numbers />
+      <SubmitButton onClick={handleButton}>Submit</SubmitButton>
     </Main>
   );
 }
@@ -27,7 +31,6 @@ export default FirstCard;
 const Main = styled.div`
   width: 100%;
   max-width: 400px;
-  height: 360px;
   background: radial-gradient(
     98.96% 98.96% at 50% 0%,
     #232a34 0%,
@@ -71,4 +74,9 @@ const TextContainer = styled.div`
 
 const SubmitButton = styled.button`
   width: 100%;
+  height: 45px;
+  background: #fc7614;
+  border-radius: 22.5px;
+  border: none;
+  margin-top: 24px;
 `;

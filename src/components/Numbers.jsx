@@ -40,6 +40,17 @@ const Num = styled.button`
   align-items: center;
   justify-content: center;
   border: none;
+  color: #7c8798;
+  cursor: pointer;
+
+  :focus {
+    background: #7c8798;
+    color: #ffffff;
+  }
+  :hover {
+    background: #fc7614;
+    color: #ffffff;
+  }
 
   h1 {
     font-weight: 700;
@@ -47,6 +58,5 @@ const Num = styled.button`
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.175px;
-    color: #7c8798;
   }
 `;
