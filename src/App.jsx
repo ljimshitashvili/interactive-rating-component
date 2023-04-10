@@ -1,11 +1,11 @@
 import { useState } from "react";
-import MainDiv from "./components/MainDiv.jsx";
+import FirstCard from "./components/MainDiv.jsx";
 import styled from "styled-components";
 
 function App() {
   return (
     <Background>
-      <MainDiv />
+      <FirstCard />
     </Background>
   );
 }

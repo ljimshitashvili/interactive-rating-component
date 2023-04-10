@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Numbers from "./Numbers";
 
-function MainDiv() {
+function FirstCard() {
   return (
     <Main>
       <Star>
@@ -22,10 +22,11 @@ function MainDiv() {
   );
 }
 
-export default MainDiv;
+export default FirstCard;
 
 const Main = styled.div`
   width: 100%;
+  max-width: 400px;
   height: 360px;
   background: radial-gradient(
     98.96% 98.96% at 50% 0%,
@@ -66,4 +67,8 @@ const TextContainer = styled.div`
     color: #969fad;
     margin-bottom: 24px;
   }
+`;
+
+const SubmitButton = styled.button`
+  width: 100%;
 `;
