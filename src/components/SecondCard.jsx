@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import thankyouImage from "interactive-rating-component-main (1)/interactive-rating-component-main/images/illustration-thank-you.svg";
+import thankyouImage from "/public/illustration-thank-you.svg";
 
 function SecondCard({ rating }) {
   return (
