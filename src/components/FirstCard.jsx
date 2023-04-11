@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import Numbers from "./Numbers";
 
-function FirstCard({ setsecondCard }) {
+function FirstCard({ rating, setrating, setsecondCard }) {
   function handleButton() {
-    setsecondCard(true);
+    if (rating !== "") {
+      setsecondCard(true);
+    }
   }
   return (
     <Main>
@@ -20,7 +21,43 @@ function FirstCard({ setsecondCard }) {
           is appreciated to help us improve our offering!
         </p>
       </TextContainer>
-      <Numbers />
+      <Container>
+        <Num
+          onClick={() => {
+            setrating("1");
+          }}
+        >
+          <h1>1</h1>
+        </Num>
+        <Num
+          onClick={() => {
+            setrating("2");
+          }}
+        >
+          <h1>2</h1>
+        </Num>
+        <Num
+          onClick={() => {
+            setrating("3");
+          }}
+        >
+          <h1>3</h1>
+        </Num>
+        <Num
+          onClick={() => {
+            setrating("4");
+          }}
+        >
+          <h1>4</h1>
+        </Num>
+        <Num
+          onClick={() => {
+            setrating("5");
+          }}
+        >
+          <h1>5</h1>
+        </Num>
+      </Container>
       <SubmitButton onClick={handleButton}>Submit</SubmitButton>
     </Main>
   );
@@ -30,7 +67,7 @@ export default FirstCard;
 
 const Main = styled.div`
   width: 100%;
-  max-width: 400px;
+  max-width: 327px;
   background: radial-gradient(
     98.96% 98.96% at 50% 0%,
     #232a34 0%,
@@ -79,4 +116,47 @@ const SubmitButton = styled.button`
   border-radius: 22.5px;
   border: none;
   margin-top: 24px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.8px;
+  color: #ffffff;
+  text-transform: uppercase;
+`;
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 17px;
+`;
+
+const Num = styled.button`
+  width: 42px;
+  height: 42px;
+  background: #262e38;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #7c8798;
+  cursor: pointer;
+
+  :focus {
+    background: #7c8798;
+    color: #ffffff;
+  }
+  :hover {
+    background: #fc7614;
+    color: #ffffff;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.175px;
+  }
 `;

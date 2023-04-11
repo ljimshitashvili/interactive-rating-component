@@ -5,15 +5,22 @@ import styled from "styled-components";
 
 function App() {
   const [secondCard, setsecondCard] = useState(false);
+  const [rating, setrating] = useState("");
 
   return (
-    <Background>
-      {secondCard ? (
-        <SecondCard />
-      ) : (
-        <FirstCard setsecondCard={setsecondCard} />
-      )}
-    </Background>
+    <div>
+      <Background>
+        {secondCard ? (
+          <SecondCard rating={rating} />
+        ) : (
+          <FirstCard
+            rating={rating}
+            setrating={setrating}
+            setsecondCard={setsecondCard}
+          />
+        )}
+      </Background>
+    </div>
   );
 }
 
@@ -23,7 +30,7 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #131518;
   padding: 0 24px;
